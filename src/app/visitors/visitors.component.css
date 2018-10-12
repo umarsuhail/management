@@ -1,0 +1,75 @@
+.container {
+    position: relative;
+    padding: 45px 70px 51px 183px;
+    height: 400px;
+    overflow: auto;
+}
+
+.namein {
+    border-radius: 20px;
+    padding: 9px 210px;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #555;
+}
+
+button {
+    float: right;
+    padding: 10px 10px;
+    background-color: #6fcc4e;
+}
+
+child:not(.mat-card-footer) {
+    margin-bottom: 0;
+    margin-right: 47%;
+    margin-top: 10%;
+}
+
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    display: block;
+    position: relative;
+    width: 85%;
+    height: 500px;
+    border-radius: 35px;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.mat-form-field-infix {
+    display: inline-block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 338px;
+}
+
+.mat-form-field {
+    display: table-cell;
+    text-align: center;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: 'K2D', sans-serif;
+    width: 740px;
+}
+
+.mat-form-field-wrapper {
+    position: relative;
+    margin-left: 50%;
+}
+
+.btn-outlined {
+    margin-top: 15px;
+    color: aliceblue;
+    background-color: #5cad65;
+    text-decoration: none;
+    padding: 17px 10px;
+    border-radius: 20px;
+    margin-left: 44%;
+}

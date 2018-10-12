@@ -1,0 +1,25 @@
+<nav class="nav nav-pills nav-justified">
+    <a [routerLink]="['/events']" routerLinkActive="router-link-active" class="nav-item nav-link active" href="#"><i class="material-icons">
+      event
+      </i>Register Events</a>
+    <a [routerLink]="['/visitors']" routerLinkActive="router-link-active" class="nav-item nav-link" href="#"><i class="material-icons">
+      business
+      </i>Register Vistors</a>
+    <a [routerLink]="['/Hosters']" routerLinkActive="router-link-active"class="nav-item nav-link" href="#"><i class="material-icons">
+      contacts
+      </i>Register Hosts</a>
+    <!-- <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" class="nav-item nav-link" href="#"><i class="material-icons">
+      dashboard
+      </i>Dashboard </a> -->
+      <a class="nav-item nav-link" >
+        <button mat-button [matMenuTriggerFor]="menu"><i class="material-icons">
+          dashboard
+        </i>Dashboard</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Visitors Dashboard</button>
+          <button mat-menu-item>Hosters Dashboard</button>
+          <button mat-menu-item>Events Dashboard</button>
+        </mat-menu>
+      </a>
+</nav>
+<router-outlet></router-outlet>
