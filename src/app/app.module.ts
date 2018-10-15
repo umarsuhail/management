@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +18,19 @@ import { MatNativeDateModule } from '@angular/material';
 import { HostersComponent } from './hosters/hosters.component';
 import { EventsComponent } from './events/events.component';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { EventdashComponent } from './eventdash/eventdash.component';
+import { VisitordashComponent } from './visitordash/visitordash.component';
+import { HostdashComponent } from './hostdash/hostdash.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SideDrawComponent } from './side-draw/side-draw.component';
+import { MdcDrawerModule } from '@angular-mdc/web';
+import { GroupListComponent } from './group-list/group-list.component';
+import { MdcElevationModule } from '@angular-mdc/web';
+import {
+  MdcButtonModule,
+  MdcFabModule,
+  MdcIconModule,
+} from '@angular-mdc/web';
 
 
 
@@ -27,10 +38,14 @@ import { MatMenuModule } from '@angular/material/menu';
   declarations: [
     AppComponent,
     NavbarComponent,
-    DashboardComponent,
     VisitorsComponent,
     HostersComponent,
-    EventsComponent
+    EventsComponent,
+    EventdashComponent,
+    VisitordashComponent,
+    HostdashComponent,
+    SideDrawComponent,
+    GroupListComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +61,16 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatMenuModule
-  ],
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MdcDrawerModule,
+    MdcButtonModule,
+    MdcFabModule,
+    MdcIconModule,
+    MdcElevationModule
+
+  ], 
   providers: [],
   bootstrap: [AppComponent]
 })

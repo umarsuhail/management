@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hosters.component.css']
 })
 export class HostersComponent implements OnInit {
+  VisitorName: any = [];
+  Role: any = [];
+  Mobile: any = [];
+  date: any = [];
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  registerHoster() {
+    const Hosterdata = {
+      'HosterName': this.VisitorName,
+      'HosterRole': this.Role,
+      'HosterMobile': this.Mobile,
+      'HosterDate': this.date,
+    }
+}
 }

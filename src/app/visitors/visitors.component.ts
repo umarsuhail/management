@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {VisitorService} from './visitors.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -8,16 +9,30 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./visitors.component.css']
 })
 export class VisitorsComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  registerForm: FormGroup;
+  submitted = false;
+  VisitorName: any=[];
+  VerifyID: any=[];
+  Mobile: any=[];
+  date: any=[];
+  rooms: any=[]
 
-  getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-        this.email.hasError('email') ? 'Not a valid email' :
-            '';
-  }
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.registerForm = this.formBuilder.group({
+      VisitorName: ['', Validators.required],
+      VerifyID: ['', Validators.required],
+      Mobile: ['', [Validators.required, Validators.email]],
+      date: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
-
+register(){
+  const data = {
+   'VisitorName' :  this.VisitorName,
+    'VerifyID': this.VerifyID,
+   'Mobile': this.Mobile,
+   'date': this.date,
+}
+}
 }

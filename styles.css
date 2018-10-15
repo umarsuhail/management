@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+html,
+body {
+    height: 100%;
+    background-color: #ddd9d9;
+}
+
+body {
+    margin: 0;
+    font-family: 'K2D', sans-serif;
+}
+
+::-webkit-input-placeholder {
+    color: peachpuff;
+    font-size: 13px;
+}

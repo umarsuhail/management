@@ -1,0 +1,35 @@
+<div class="container">
+    <mat-card>
+        <h1>Register Hosters</h1>
+        <div class="namein">
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Enter hoster name" value="">
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="namein">
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Role" value="">
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="namein">
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Mobile Number" value="">
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="namein">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class=""></div>
+        <p><a href="#" class="btn btn-outlined">Register Hoster</a></p>
+
+    </mat-card>

@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+td.mat-cell {
+    padding: 10px;
+    border-bottom-width: 3px;
+    border-bottom-style: ridge;
+    vertical-align: baseline;
+}
+
+.container {
+  padding: 50px 224px;
+  width: 800px;
+  height: 400px;
+  overflow-x: auto;
+  /* margin-left: 454px; */
+}

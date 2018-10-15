@@ -1,35 +1,54 @@
 <div class="container">
-    <mat-card>
-        <h1>Register Visitors</h1>
-        <div class="namein">
-            <form class="example-form">
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Enter Visitor's name" value="">
-                </mat-form-field>
-            </form>
-        </div>
-        <div class="namein">
-            <form class="example-form">
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Role" value="">
-                </mat-form-field>
-            </form>
-        </div>
-        <div class="namein">
-            <form class="example-form">
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Mobile Number" value="">
-                </mat-form-field>
-            </form>
-        </div>
-        <div class="namein">
-            <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-        </div>
-<div class=""></div>
-        <p><a href="#" class="btn btn-outlined">Register Visitor</a></p>
-
-    </mat-card>
+  <mat-card>
+    <h1>Register Visitors</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="namein">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter Visitor's name" value="" [(ngModel)]="visitorName" [ngModelOptions]="{standalone: true}"
+              [ngClass]="{ 'is-invalid': submitted && f.visitorName.errors }" required>
+            <div *ngIf="submitted && f.visitorName.errors" class="invalid-feedback">
+              <div *ngIf="f.visitorName.errors.required">Visitor Name required</div>
+            </div>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="namein">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Valid ID Number" value="" [(ngModel)]="VerifyID" [ngModelOptions]="{standalone: true}"
+              [ngClass]="{ 'is-invalid': submitted && f.VerifyID.errors }" required>
+            <div *ngIf="submitted && f.VerifyID.errors" class="invalid-feedback">
+              <div *ngIf="f.VerifyID.errors.required">Visitor ID required</div>
+            </div>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="namein">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Mobile Number" value="" [(ngModel)]="Mobile" [ngModelOptions]="{standalone: true}"
+              [ngClass]="{ 'is-invalid': submitted && f.Mobile.errors }" required>
+            <div *ngIf="submitted && f.Mobile.errors" class="invalid-feedback">
+              <div *ngIf="f.Mobile.errors.required">Visitor Mobile Number required</div>
+            </div>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="namein">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="date" [ngModelOptions]="{standalone: true}"
+            required>
+          <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+            <div *ngIf="f.date.errors.required">date required</div>
+          </div>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      
+      
+    </form>
+<div class="form-group">
+<p><button href="#" class="btn btn-outlined">Register Visitor</button></p>
+</div>

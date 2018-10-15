@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    padding: 45px 70px 51px 183px;
+    padding: 133px 70px 51px 183px;
     height: 400px;
     overflow: auto;
 }
@@ -16,9 +16,10 @@
 }
 
 button {
-    float: right;
+    float: none;
     padding: 10px 10px;
     background-color: #6fcc4e;
+    margin-left: 38%;
 }
 
 child:not(.mat-card-footer) {
