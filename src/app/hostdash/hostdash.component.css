@@ -20,3 +20,9 @@ td.mat-cell {
   overflow-x: auto;
   /* margin-left: 454px; */
 }
+.hosthead {
+
+  text-align: center;
+  font-size: 30px;
+
+}

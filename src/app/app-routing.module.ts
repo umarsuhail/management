@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'visitors', component: VisitorsComponent },
   { path: 'Hosters', component: HostersComponent},
   { path: 'events', component: EventsComponent},
-  { path: 'event-dashboard', component: EventdashComponent},
+  { path: 'eventdashboard', component: EventdashComponent},
   { path: 'host-dashboard', component: HostdashComponent},
   { path: 'Visitors-dashboard', component: VisitordashComponent},
   { path: 'sidedraw', component: SideDrawComponent },

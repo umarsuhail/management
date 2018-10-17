@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSort, MatTableDataSource} from '@angular/material';
+import { hosterService } from '../hosters/hosters.service';
+
 export interface PeriodicElement {
   position: number;
   name: string;
@@ -16,24 +18,45 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Sachn Tend', Event: 'Visitor', Mobile: 9497656243, date : '1/10/2017', rooms: 6},
   {position: 1, name: 'Rahul Dravid', Event: 'Visitor', Mobile: 9497656243, date : '9/11/2017', rooms: 2},
 ];
-
-
 @Component({
   selector: 'app-hostdash',
   templateUrl: './hostdash.component.html',
   styleUrls: ['./hostdash.component.css']
 })
-export class HostdashComponent implements OnInit {
+// let userdata=[
+//   username=this.username;
+//   password=this.pa
 
+// ]
+export class HostdashComponent implements OnInit {
+  tableData: any;
   displayedColumns: string[] = ['position', 'name', 'Event', 'Mobile', 'date', 'rooms'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource = new MatTableDataSource(this.tableData);
 
   @ViewChild(MatSort) sort: MatSort;
-  constructor() { }
+ 
+  constructor(private hostservice: hosterService) { }
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
+    this.HostRegister();
+  }
+  HostRegister() {
+    this.hostservice.geHostData('').subscribe((response) => {
+        if (response.status === 200) {
+          this.tableData = response
+        }
+        // else {
+        //   this.notify.openSnackBar("Sorry,Try again", "");
+        // }
+      },
+        error => {
+          console.log(error);
+
+        });
+    }
 
   }
 
-}
+
+

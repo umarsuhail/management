@@ -65,11 +65,12 @@ h1 {
 }
 
 .btn-outlined {
-    margin-top: 15px;
-    color: aliceblue;
-    background-color: #5cad65;
-    text-decoration: none;
-    padding: 17px 10px;
-    border-radius: 20px;
-    margin-left: 44%;
+  margin-top: 15px;
+  color: aliceblue;
+  background-color: #5cad65;
+  text-decoration: none;
+  padding: 17px 10px;
+  border-radius: 20px;
+  margin-left: 355px;
+  float: left;
 }

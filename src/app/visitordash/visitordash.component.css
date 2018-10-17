@@ -20,3 +20,7 @@ td.mat-cell {
   overflow-x: auto;
   /* margin-left: 454px; */
 }
+.visitorhead{
+      text-align: center;
+      font-size: 30px;
+}

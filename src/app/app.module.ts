@@ -23,7 +23,7 @@ import { VisitordashComponent } from './visitordash/visitordash.component';
 import { HostdashComponent } from './hostdash/hostdash.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideDrawComponent } from './side-draw/side-draw.component';
-import { MdcDrawerModule } from '@angular-mdc/web';
+import { MdcDrawerModule, MdcListModule } from '@angular-mdc/web';
 import { GroupListComponent } from './group-list/group-list.component';
 import { MdcElevationModule } from '@angular-mdc/web';
 import {
@@ -68,7 +68,8 @@ import {
     MdcButtonModule,
     MdcFabModule,
     MdcIconModule,
-    MdcElevationModule
+    MdcElevationModule,
+    MdcListModule
 
   ], 
   providers: [],
